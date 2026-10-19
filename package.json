@@ -1,0 +1,43 @@
+{
+  "name": "artgo-agent",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Art GO Agent — a layered graphic editor your own AI coding agent drives from the command line (Claude Code, Codex, Cursor, Copilot, Windsurf, Gemini CLI)",
+  "bin": {
+    "artgo": "bin/artgo.mjs"
+  },
+  "scripts": {
+    "artgo": "node bin/artgo.mjs",
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "smoke:agent": "node agent-smoke.mjs",
+    "smoke:textfx": "tsx textfx-smoke.ts",
+    "fonts:manifest": "tsx fonts-manifest.ts"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "4.3.3",
+    "ag-psd": "31.0.3",
+    "playwright": "1.64.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "sql.js": "1.15.0",
+    "vgpu": "0.6.0",
+    "vite": "5.4.10",
+    "zustand": "4.5.5"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
+    "binaryen": "132.0.0",
+    "tsx": "4.23.15",
+    "typescript": "5.6.3",
+    "vitest": "2.1.5"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "Apache-2.0"
+}
